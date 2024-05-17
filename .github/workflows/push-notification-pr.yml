@@ -25,7 +25,8 @@ jobs:
           subject: ${{github.event_name}} Notification
           body: |
             There has been an new ${{ github.event_name}} in the repository.
-            Repository : ${{github.repository}}
-            Branch     : ${{github.ref}}
-            Action by  : ${{github.actor}}
-            Action     : ${{github.event.action}}
+            **Details**
+             - Repository : ${{github.repository}}
+             - Branch     : ${{github.ref}}
+             - Action by  : ${{github.actor}}
+             - Action     : ${{github.event.action}}
