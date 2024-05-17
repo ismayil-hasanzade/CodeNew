@@ -11,8 +11,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          from: ${{ secrets.EMAIL }}
-          to: ${{ secrets.EMAIL }}
+          from: ${{ secrets.MAIL_FROM }}
+          to: ${{ secrets.MAIL_TO }}
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "Push Notification"
