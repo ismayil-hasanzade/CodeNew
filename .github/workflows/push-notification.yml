@@ -1,5 +1,7 @@
-name: Push Notificication
+name: Push Notification
+
 on: [push]
+
 jobs:
   notify:
     runs-on: ubuntu-latest
@@ -9,9 +11,9 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          from: ${{ secrets.MAIL_FROM }}
-          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.EMAIL }}
+          to: ${{ secrets.EMAIL }}
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subjects: "Push Notification"
+          subject: "Push Notification"
           body: "Push Notification"
